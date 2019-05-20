@@ -1,13 +1,13 @@
 # aafu Theme
 
-The aafu Theme is a one page responsive portfolio with accordion and a switch to toggle between light/dark mode.
+The aafu theme is a one page responsive portfolio based on [Darshanbaral's theme](//https://github.com/darshanbaral/aafu).
 
 ## Installation
 
 Inside the folder of your Hugo site run:
 
-    $ cd themes
-    $ git clone https://github.com/darshanbaral/aafu.git
+    cd themes
+    git clone https://github.com/frohlichcortezh/aafu.git
 
 For more information read the official [setup guide](//gohugo.io/overview/installing/) of Hugo.
 
@@ -17,7 +17,7 @@ After installing the aafu Theme successfully, modify the `config.toml` as you wi
 
 ### The config file
 
-You'll find a file called [`config.toml`](//github.com/darshanbaral/aafu/blob/master/exampleSite/config.toml). Copy the `config.toml`to the root folder of your Hugo site and customize it per your need.
+You'll find a file called [`config.toml`](//github.com/frohlichcortezh/aafu/blob/master/exampleSite/config.toml). Copy the `config.toml`to the root folder of your Hugo site and customize it per your need.
 
 Note that the sections to be displayed in the accordion, the order of the sections, and the section that should be expanded at the beginning can be specifed in the `config.toml`. The base or initial theme is also chosen in the `config.toml`.
 
