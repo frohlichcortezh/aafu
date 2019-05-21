@@ -1,15 +1,8 @@
 <div class="ml-auto mr-auto row row-eq-height mt-4">
   <div class="col-md-5 text-center border-light p-2  mb-4 bg-white">
-    <div class="float-left" style="width: 45px; height: 45px;">
-      <i
-        class="fas fa-toggle-off zoomlink text-dark"
-        id="toggle"
-        title="Toggle Theme"
-        onclick="toggleTheme()"
-      ></i>
-    </div>
-    {{ partial "profilePhoto" . }}
+    {{ partial "profilePhoto" . }}   
     {{ partial "social" . }}
+    {{ partial "aboutme" . }}    
     {{ partial "footer" . }}
   </div>
   <div class="col-md-7 border p-2 mb-4 bg-white">
@@ -24,11 +17,5 @@
     </div>
     {{ end }}
     <script src="{{ .Site.BaseURL }}/js/accordion.js"></script>
-    <script>
-      let isBaseThemeDark = {{ .Site.Params.useDarkTheme }};
-      if (isBaseThemeDark) {
-        toggleTheme();
-      }
-    </script>
   </div>
 </div>

@@ -1,12 +1,12 @@
 name = "aafu"
 license = "MIT"
 licenselink = "https://github.com/darshanbaral/aafu/blob/master/LICENSE"
-description = "Single page portfolio theme with accordion and dark/light theme as well as a theme toggle button"
-homepage = "https://github.com/darshanbaral/aafu"
+description = "Single page portfolio theme based on https://github.com/darshanbaral/aafu"
+homepage = "https://github.com/frohlichcortezh/aafu"
 tags = ["portfolio", "single page", "resume"]
 features = ["responsive", "dark", "clean"]
 min_version = "0.41"
 
 [author]
-  name = "Darshan Baral"
-  homepage = "https://www.darshanbaral.com/"
+  name = "Hector Frohlich Cortez"
+  homepage = "https://www.frohlichcortezh.github.com/"
