@@ -1,0 +1,18 @@
+/* Add a background color to the button if it is clicked on (add the .active class with JS), 
+    and when you move the mouse over it (hover) */
+.active, .accordion:hover {
+    background-color: rgb(245, 240, 240);
+}
+
+.accordion:after {
+    content: '\2795'; /* Unicode character for "plus" sign (+) */    
+    font-size: 13px;
+    color: #777;
+    float: right;
+    align-content: space-around;
+    margin-left: 5px;
+}
+  
+.active:after {
+    content: "\2796";/*"\2796"; /* Unicode character for "minus" sign (-) */    
+}

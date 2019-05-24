@@ -13,12 +13,13 @@
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T"
     crossorigin="anonymous"
   />
-  <link
-    rel="stylesheet"
-    href="https://use.fontawesome.com/releases/v5.5.0/css/all.css"
-    integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU"
+  <link 
+    rel="stylesheet" 
+    href="https://use.fontawesome.com/releases/v5.8.2/css/all.css" 
+    integrity="sha384-oS3vJWv+0UjzBfQzYUhtDYW+Pj2yciDJxpsK1OYPAYjqT085Qq/1cq5FLXAZQ7Ay" 
     crossorigin="anonymous"
-  />
+  >
+  <link rel="stylesheet" href="http://fortawesome.github.io/Font-Awesome/assets/font-awesome/css/font-awesome.css">   
   <link
     rel="stylesheet"
     href="https://cdn.rawgit.com/jpswalsh/academicons/master/css/academicons.min.css"
@@ -27,7 +28,10 @@
     href="https://fonts.googleapis.com/css?family=Alegreya%7CLato"
     rel="stylesheet"
   />
-
+  <link
+  href="{{ .Site.BaseURL }}/css/screen.css"
+  rel="stylesheet"
+  />
   <script src="{{ .Site.BaseURL }}/js/themes.js"></script>
   <script src="{{ .Site.BaseURL }}/js/toggleTheme.js"></script>
 
@@ -35,13 +39,11 @@
     html {
       width: 100vw;
     }
-    body {
-      font-family: "Lato", sans-serif;
-    }
+    body,
     h1,
     h2,
     h3 {
-      font-family: "Alegreya", serif;
+      font-family: "Roboto Mono", monospace;
     }
     .zoomlink {
       font-size: 2em;

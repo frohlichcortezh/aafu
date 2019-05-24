@@ -1,0 +1,17 @@
+<header class="text-dark mt-4">
+    <p>
+            {{ if .Site.IsMultiLingual }}
+                {{ $node := . }}
+                {{ .Scratch.Set "separator" true }}
+                    {{ range .Site.Home.AllTranslations }}
+                        {{ if ne $.Site.Language .Language }}                            
+                              <a href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                              {{ if $node.Scratch.Get "separator" }}
+                                <span>|</span>
+                                {{ $node.Scratch.Set "separator" false }}
+                            {{ end }}
+                        {{ end }}
+                    {{ end }}
+            {{ end }}                
+    </p> 
+</header>
