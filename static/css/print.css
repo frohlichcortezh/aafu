@@ -1,13 +1,8 @@
 @media print {
 
-    .background{
-		background-color: rgb(6, 134, 128) !important;
-		box-shadow:  inset 0 0 0 1000px rgb(6, 134, 128) !important; /* workaround for IE 11*/
-     }
-     
     .accordion .content {
         display: block !important;
-        height: auto !important;
+        height: fit-content !important;
     }
     
     a[href*='//']:after {
