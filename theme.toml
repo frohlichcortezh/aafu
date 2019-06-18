@@ -1,10 +1,10 @@
 name = "aafu"
 license = "MIT"
 licenselink = "https://github.com/darshanbaral/aafu/blob/master/LICENSE"
-description = "Single page portfolio theme based on https://github.com/darshanbaral/aafu"
+description = "Single page CV theme based on https://github.com/darshanbaral/aafu"
 homepage = "https://github.com/frohlichcortezh/aafu"
-tags = ["portfolio", "single page", "resume"]
-features = ["responsive", "dark", "clean"]
+tags = ["CV", "single page", "resume"]
+features = ["responsive", "clean", "minimalist"]
 min_version = "0.41"
 
 [author]

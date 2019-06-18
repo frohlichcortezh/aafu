@@ -1,11 +1,10 @@
 {{ range.Site.Params.language.list }}
-  {{ $length := len .languages}}
-  {{ range $index, $language := .languages }}
-    <code>{{$language}}; </code>    
+  {{ range $language := .languages }}
+    <strong>{{$language}} | </strong>    
   {{end}}
   <div class="w-100 bg-secondary mt-1 mb-3">
     <div
-      class="bg-primary"
+      class="bg-dark"
       style="width: {{ .languagesrating }}%; height: 15px;"
     ></div>
   </div>  

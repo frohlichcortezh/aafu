@@ -1,11 +1,10 @@
 {{ range.Site.Params.skill.list }}
-  {{ $length := len .skills}}
-  {{ range $index, $skill := .skills }}
-    <code>{{$skill}}; </code>    
+  {{ range $skill := .skills }}
+    <strong>{{$skill}} | </strong>    
   {{end}}
   <div class="w-100 bg-secondary mt-1 mb-3">
     <div
-      class="bg-primary"
+      class="bg-dark"
       style="width: {{ .skillrating }}%; height: 15px;"
     ></div>
   </div>  

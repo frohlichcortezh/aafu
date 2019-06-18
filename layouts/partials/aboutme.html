@@ -1,3 +1,24 @@
-<p class="text-dark">
+<!-- <p class="text-info">
+    {{ if .Site.IsMultiLingual }}
+        {{ $node := . }}
+        {{ .Scratch.Set "separator" true }}
+            {{ range .Site.Home.AllTranslations }}
+                {{ if ne $.Site.Language .Language }}                            
+                      <a class="text-info" href="{{ .Permalink }}">{{ .Language.LanguageName }}</a>
+                      {{ if $node.Scratch.Get "separator" }}
+                        <span>|</span>
+                        {{ $node.Scratch.Set "separator" false }}
+                    {{ end }}
+                {{ end }}
+            {{ end }}
+    {{ end }}                
+</p> -->
+<p class="text-dark">  
   {{ .Site.Params.aboutme.description | markdownify }}
 </p>
+<button class="col-center" id="btnPrint" onclick="printMe()"><i class="fas fa-print"></i></button>
+<script>
+function printMe() {
+  window.print();
+}
+</script>

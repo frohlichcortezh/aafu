@@ -1,12 +1,25 @@
 {{ range.Site.Params.experience.list }}
 <dl>
   <dt class="text-dark mb-0">
-    {{ if .link }}<a class="text-primary" href="{{ .link }}">{{ .company }}</a
+    {{ if .url }}<a class="text-info" href="{{ .url }}" target="_blank">{{ .company }}</a
     >{{ else }} {{ .company }} {{ end }}
   </dt>
   <dd class="text-dark ml-3">
-    {{ .dates | markdownify }} &middot; {{ .position }}
+    {{ .dates }} &middot; {{ .position }}
   </dd>
-  <dd class="text-dark mb-0 ml-3">{{ .details | markdownify }}</dd>
+  <dd class="text-dark mb-0 ml-3">
+    <strong>{{ i18n "Responsabilities" }}</strong>
+    <ul>
+      {{ range $responsability := .responsabilities }}
+        <li>{{$responsability}}</li>
+      {{ end}}
+    </ul>
+    <strong>{{ i18n "Achivements" }}</strong>
+    <ul>
+        {{ range $achivement := .achivements }}
+          <li>{{$achivement}}</li>
+        {{ end}}
+      </ul>
+  </dd>
 </dl>
 {{ end }}

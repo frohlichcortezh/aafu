@@ -1,22 +1,33 @@
 {{ range.Site.Params.education.list }}
 <dl>
   <dt class="text-dark">
-    {{ if .degree_link }}<a class="text-primary" href="{{ .degree_link }}">{{ .degree }}</a
+    {{ if .degree_url }}<a class="text-info" href="{{ .degree_url }}" target="_blank">{{ .degree }}</a
     >{{ else }} {{ .degree }} {{ end }}
   </dt>
-  <dd class="text-dark mb-0 ml-3">{{ .dates }} &middot; {{ if .college_link }}<a class="text-primary" href="{{ .college_link }}">{{ .college }}</a
-    >{{ else }} {{ .college }} {{ end }}</dd>
+  <dd class="text-dark mb-0 ml-3">
+    <strong>{{ .dates }} &middot; 
+      {{ if .college_link }}
+        <a class="text-info" href="{{ .college_link }}" target="_blank">{{ .college }}</a>
+      {{ else }} 
+        {{ .college }} 
+      {{ end }}
+    </strong>
+  </dd>
   {{ if .thesis_link }}
   <dd class="text-dark mb-0 ml-4">
     Thesis:
-    <a class="text-primary" href="{{ .thesis_link }}"
+    <a class="text-info" href="{{ .thesis_link }}" target="_blank"
       ><i>{{ .thesis_title }}</i></a
     >
   </dd>
   {{ end }}
   {{ if .degree_description }}
   <dd class="text-dark">
-    {{ .degree_description }}
+      <ul>
+          {{ range $description := .degree_description }}
+            <li>{{$description}}</li>
+          {{ end}}
+      </ul>
   </dd>
   {{ end }}
 </dl>

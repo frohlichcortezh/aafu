@@ -1,14 +1,23 @@
 <div class="ml-auto mr-auto row row-eq-height mt-4">
-    <div class="col-md-5 text-center border-light p-2  mb-4 bg-white">
-      {{ partial "header" . }}       
+    <div class="col-md-4 text-center border-light p-2 mb-4 bg-info background">        
       {{ partial "profilePhoto" . }}   
       {{ partial "social" . }}
-      {{ partial "aboutme" . }}    
+      {{ partial "aboutme" . }}  
+      {{ range .Site.Params.showInAccordionLeft }}
+      <h2 class="accordion w-100 text-dark {{ if .expand }} active {{ end }}">
+        {{ $current := index $.Site.Params .item }}
+        <i class="col-md-2 col-centered {{ $current.icon }}"></i>
+        {{ $current.title }}
+      </h2>
+      <div class="panel overflow-hidden">
+        {{ partial .item $ }}
+      </div>
+      {{ end }}
       {{ partial "footer" . }}    
     </div>
-    <div class="col-md-7 border p-2 mb-4 bg-white">
-      {{ range .Site.Params.showInAccordion }}
-      <h2 class="accordion w-100 text-primary {{ if .expand }} active {{ end }}">
+    <div class="col-md-8 border p-2 mb-4 bg-white">
+      {{ range .Site.Params.showInAccordionRight }}
+      <h2 class="accordion w-100 text-info {{ if .expand }} active {{ end }}">
         {{ $current := index $.Site.Params .item }}
         <i class="col-md-1 col-centered {{ $current.icon }}"></i>
         {{ $current.title }}
@@ -17,7 +26,8 @@
         {{ partial .item $ }}
       </div>
       {{ end }}
-      <script src="{{ .Site.BaseURL }}/js/accordion.js"></script>      
     </div>
+    <script src="{{ .Site.BaseURL }}/js/accordion.js"></script>
+    <script src="{{ .Site.BaseURL }}/js/print.js"></script>    
   </div>
   
