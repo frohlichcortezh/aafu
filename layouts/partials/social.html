@@ -4,9 +4,8 @@
 <div class="mt-2 d-flex flex-wrap justify-content-center">
   {{ range.Site.Params.social.list }}
   <div style="height:45px; width:45px;">
-    <a href="{{ .url }}" target="_blank" >
-      <i class="text-dark zoomlink mt-1 {{ .class }} {{ .icon }}"></i>
-    </a>
+    {{ if .url }}<a href="{{ .url }}" target="_blank"><i class="text-dark zoomlink mt-1 {{ .class }} {{ .icon }}"></i></a
+      >{{ else }} <i class="text-dark zoomlink mt-1 {{ .class }} {{ .icon }}"></i> {{ end }}
   </div>
   {{ end }}
 </div>
